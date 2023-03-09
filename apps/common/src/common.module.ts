@@ -1,9 +1,5 @@
 import { Module } from '@nestjs/common';
-import { CommonController } from './common.controller';
-import { CommonService } from './common.service';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { BlogModel } from './models/blog.model';
-import { UserModel } from './models/user.model';
 
 @Module({
   imports: [
@@ -18,8 +14,6 @@ import { UserModel } from './models/user.model';
       autoLoadModels: true
       // models: [User], not needed
     })
-  ],
-  controllers: [CommonController],
-  providers: [CommonService],
+  ]
 })
 export class CommonModule { }
